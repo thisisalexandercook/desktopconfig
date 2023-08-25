@@ -1,0 +1,61 @@
+{
+
+
+    "layer": "top", 
+    "modules-left": ["wlr/workspaces"],
+    "modules-center": [],
+    "modules-right": [ "battery","network", "bluetooth","clock"],
+    "wlr/workspaces": {
+	"format": "{icon}",
+	"format-icons": {
+	        "1": "",
+		"2":  "",
+		"3":  "",
+		"4":  "",
+		"5":  "",
+	},
+	       "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+	           }
+	},
+	"battery": {
+   	    "format": "{capacity}% {icon}",
+   	    "format-icons": ["", "", "", "", ""],
+   	
+    },
+    "clock": {
+        "format": "{:%I:%M %p}"
+    },
+"tray": {
+    "icon-size": 21,
+    "spacing": 10
+},
+"bluetooth": {
+	"format": "󰂲",
+	"format-disabled": "󰂲",
+	"format-connected": "",
+	"tooltip-format": "{controller_alias}\t{controller_address}",
+	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+	"on-click": "blueman-manager"
+},
+
+"network": {
+    "interface": "wlp0s20f3",
+    "format": "{ifname}",
+    "format-wifi": "",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "format-disconnected": "fd", //An empty format will hide the module.
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50,
+    "on-click": "networkmanager_dmenu"
+},
+
+}

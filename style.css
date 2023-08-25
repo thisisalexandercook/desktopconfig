@@ -1,0 +1,67 @@
+/* Base styling for the Waybar */
+#waybar {
+  background: #000000; /* Black background for the bar */
+  color: grey;         /* Default text color is grey */
+  font-size: 18px;
+
+}
+
+/* Style for an inactive workspace */
+#workspaces button {
+  background: #000000; /* Black background for workspace button */
+  color: grey;         /* Grey text/icon color for inactive workspace */
+  border: none;        /* Remove border */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* Style for the active workspace */
+#workspaces button.active {
+  background: #000000; /* Black background for active workspace button */
+  color: white;        /* White text/icon color for active workspace */
+}
+
+/* Hover effect for workspace buttons (optional) */
+#workspaces button:hover {
+  background: #1a1a1a; /* Slightly lighter than black for hover effect */
+}
+
+/* Styling for the clock module */
+#clock {
+  background: #000000; /* Black background for the clock module */
+  color: white;        /* White text color for the clock module */
+   padding: 0 5px;
+}
+
+/* Styling for the battery module */
+#battery {
+  background: #000000; /* Black background for the battery module */
+  color: white;        /* White text color for the battery module */
+  padding: 0 15px;
+
+}
+
+/* Styling for the tray module */
+#tray {
+    background: #000000; /* Black background for the tray module */
+    padding: 0 5px;
+
+}
+
+/* Styling for the tray module */
+#bluetooth {
+    background: #000000; /* Black background for the bluetooth module */
+    color: white;        /* White text color for the bluetooth module */
+    padding: 0 10px;
+}
+
+#network {
+    background: #000000; /* Black background for the bluetooth module */
+    color: white;        /* White text color for the bluetooth module */
+    padding: 0 10px;
+}
+
+/* If you want the active module (like when you click on it) to have a different style, you can use */
+#module-name:active {
+  background: #1a1a1a;
+  color: white;
+}

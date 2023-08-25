@@ -1,0 +1,44 @@
+[global]
+# General settings
+font = Monospace 10
+alignment = center
+show_age_threshold = 60
+word_wrap = true
+frame_width = 1                 
+corner_radius = 5               
+
+
+
+
+
+# Stack duplicated notifications, and replace old ones
+stack_duplicates = true
+
+
+[urgency_low]
+# Low urgency: This is for generic notifications
+background = "#222222"
+foreground = "#888888"
+timeout = 5
+
+[urgency_normal]
+background = "#00000080"   # Black background with 50% opacity
+foreground = "#ffffff"
+timeout = 2
+frame_color = "#a8a8a8"           # Faint grey borders
+
+
+[urgency_critical]
+# High urgency: For critical notifications
+background = "#900000"
+foreground = "#ffffff"
+timeout = 0
+
+# Rules for specific notifications
+[rule/volume]
+appname = "volume"
+urgency = normal
+
+[rule/brightness]
+appname = "brightness"
+urgency = normal
